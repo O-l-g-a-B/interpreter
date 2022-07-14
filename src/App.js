@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NaviBar from './Components/Navibar';
-import Word from './Components/Word';
+import WordTabl from './Components/WordTabl';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <NaviBar/>
-      <Word/>
+      <WordTabl/>
     </>
   );
 }
