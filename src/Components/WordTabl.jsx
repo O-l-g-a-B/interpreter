@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Table, Button } from 'react-bootstrap';
-import words from './Words.json';
+import wordsArray from './wordsArray.json';
 
 export default function WordTabl(props) {
-    const [currentData, setCurrentData] = useState(words);
+    const [words, setWords] = useState(wordsArray);
     return (
         <Table striped bordered hover variant="dark">
             <thead>
@@ -18,7 +18,7 @@ export default function WordTabl(props) {
                 </tr>
             </thead>
             <tbody>
-                {currentData.map((words, idx) => (
+                {wordsArray.map((words, idx) => (
                     <tr key={words.id}>
                         <td>{idx + 1}</td>
                         <td>{words.english}</td>
