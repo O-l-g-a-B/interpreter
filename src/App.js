@@ -14,9 +14,9 @@ function App() {
       <NaviBar/>
       <Container fluid>
         <Row>
-        <Col md={6}>
+        <Col md={8}>
       <WordCard /></Col>
-      <Col md={6}>
+      <Col md={4}>
       <WordTabl/></Col>
       </Row>
       </Container>
