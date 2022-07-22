@@ -9,14 +9,14 @@ export default (props) => {
     return (
         <Container fluid>
             <Row>
-                {wordsArray.map((words) => (
-                    <Col key={words.id} sm={6} lg={4}>
+                {wordsArray.map((word) => (
+                    <Col key={word.id} sm={6} lg={4}>
                         <Card border="warning" className='my-2'>
                             <Card.Body>
-                                <Card.Title>{words.english}</Card.Title>
-                                <Card.Text>{words.transcription}</Card.Text>
+                                <Card.Title>{word.english}</Card.Title>
+                                <Card.Text>{word.transcription}</Card.Text>
                                 <div>
-                                    <ButtonWord word={words} key={words.id} />
+                                    <ButtonWord word={word} key={word.id} />
                                 </div>
                             </Card.Body>
                         </Card>
