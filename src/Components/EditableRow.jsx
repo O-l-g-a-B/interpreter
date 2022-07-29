@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, InputGroup, Form } from 'react-bootstrap';
+import React from "react";
+import { Button, InputGroup, Form } from "react-bootstrap";
 
 
-export default ({ word, editFormData, handleEditFormChange, handleCancelClick }) => {
+export default function EditableRow({ editFormData, handleEditFormChange, handleCancelClick }) {
 
     return (
         <tr>
