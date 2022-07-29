@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col, Card } from "react-bootstrap";
 import wordsArray from './wordsArray.json';
 import { ButtonWord } from "./ButtonWord";
 
-export default (props) => {
+export default function WordCard() {
 
     return (
         <Container fluid>

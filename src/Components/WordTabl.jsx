@@ -1,11 +1,10 @@
 import React, { useState, Fragment } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Table, Form, InputGroup, Button } from 'react-bootstrap';
+import { Table, Form } from "react-bootstrap";
 import wordsArray from './wordsArray.json';
 import ReadOnlyRow from "./ReadOnlyRow";
 import EditableRow from "./EditableRow";
 
-export default function WordTabl(props) {
+export default function WordTabl() {
 
 
     const [words, setWords] = useState(wordsArray);
@@ -37,10 +36,7 @@ export default function WordTabl(props) {
         const fieldName = event.target.getAttribute('name');
         const fieldValue = event.target.value;
 
-        const newFormData = { ...editFormData };
-        newFormData[fieldName] = fieldValue;
-
-        setEditFormData(newFormData);
+        setEditFormData(prevState => ({ ...prevState, [fieldName]: fieldValue }))
     };
 
     const handleEditFormSubmit = (event) => {
@@ -53,13 +49,7 @@ export default function WordTabl(props) {
             russian: editFormData.russian,
         }
 
-        const newWords = [...words];
-
-        const index = words.findIndex((word) => word.id === editWordId);
-
-        newWords[index] = editedWord;
-
-        setWords(newWords);
+        setWords(prevState => prevState.map(word => word.id === editWordId ? editedWord : word));
         setEditWordId(null);
     };
 

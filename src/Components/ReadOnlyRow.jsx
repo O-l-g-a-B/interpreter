@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 
 
-export default ({ word, idx, handleEditClick }) => {
-
+export default function RedOnlyRow({ word, idx, handleEditClick }) {
 
     return (
         <tr key={word.id}>
