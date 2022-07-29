@@ -5,6 +5,7 @@ import NaviBar from "./Components/Navibar";
 import WordTabl from "./Components/WordTabl";
 import WordCard from "./Components/WordCard";
 
+
 function App() {
   return (
     <>
