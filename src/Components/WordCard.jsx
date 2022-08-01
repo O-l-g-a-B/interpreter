@@ -9,7 +9,7 @@ export default function WordCard(props) {
       <Row>
         {wordsArray.map((word) => (
           <Col key={word.id} sm={6} lg={4}>
-            <Card border="warning" className="my-2">
+            <Card border="warning" className="mb-4">
               <Card.Body>
                 <Card.Title>{word.english}</Card.Title>
                 <Card.Text>{word.transcription}</Card.Text>
