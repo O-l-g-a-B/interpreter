@@ -13,7 +13,7 @@ export default function ControlledCarousel() {
   return (
     <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
       {wordsArray.map((word) => (
-        <Carousel.Item>
+        <Carousel.Item key={word.id}>
           <Card border="warning" className="text-center my-4">
             <Card.Body>
               <Card.Title className="pt-5">

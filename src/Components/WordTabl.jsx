@@ -71,7 +71,7 @@ export default function WordTabl() {
         </thead>
         <tbody>
           {words.map((word, idx) => (
-            <Fragment>
+            <Fragment key={word.id}>
               {editWordId === word.id ? (
                 <EditableRow
                   editFormData={editFormData}

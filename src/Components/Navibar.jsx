@@ -5,7 +5,7 @@ export default function NaviBar() {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
       <Navbar.Brand>
-    <h1>Interpreter</h1>
+        <h1>Interpreter</h1>
       </Navbar.Brand>
       <Form.Floating>
         <Form.Control type="text" placeholder="Search..." />
