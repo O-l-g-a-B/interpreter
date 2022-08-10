@@ -9,7 +9,7 @@ export const ButtonWord = ({ word }) => {
   return isPressed ? (
     <div>{word.russian || "бассейн"}</div>
   ) : (
-    <Button variant="warning" className="mb-5" onClick={handleClick}>
+    <Button variant="warning" onClick={handleClick}>
       Examination
     </Button>
   );
