@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Carousel, Card } from "react-bootstrap";
+import { Carousel, Card, Form } from "react-bootstrap";
 import wordsArray from "./wordsArray.json";
 import { ButtonWord } from "./ButtonWord";
 
@@ -10,23 +10,41 @@ export default function ControlledCarousel() {
     setIndex(selectedIndex);
   };
 
+  const [value, setValue] = useState("");
+
+  const filteredWords = wordsArray.filter((word) => {
+    return word.english.toLowerCase().includes(value.toLowerCase());
+  });
+
   return (
-    <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
-      {wordsArray.map((word) => (
-        <Carousel.Item key={word.id}>
-          <Card border="warning" className="text-center my-4">
-            <Card.Body>
-              <Card.Title className="pt-5">
-                {word.english || "swimming pool"}
-              </Card.Title>
-              <Card.Text>{word.transcription || "[ ˈswɪmɪŋ puːl ]"}</Card.Text>
-              <div>
-                <ButtonWord word={word} key={word.id} />
-              </div>
-            </Card.Body>
-          </Card>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <>
+      <Form.Floating>
+        <Form.Control
+          type="text"
+          placeholder="Search..."
+          onChange={(event) => setValue(event.target.value)}
+        />
+        <label>Search...</label>
+      </Form.Floating>
+      <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
+        {filteredWords.map((word) => (
+          <Carousel.Item key={word.id}>
+            <Card border="warning" className="text-center my-4">
+              <Card.Body>
+                <Card.Title className="pt-5">
+                  {word.english || "swimming pool"}
+                </Card.Title>
+                <Card.Text>
+                  {word.transcription || "[ ˈswɪmɪŋ puːl ]"}
+                </Card.Text>
+                <div>
+                  <ButtonWord word={word} key={word.id} />
+                </div>
+              </Card.Body>
+            </Card>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </>
   );
 }

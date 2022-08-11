@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Form } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 export default function NaviBar() {
   return (
@@ -7,10 +7,6 @@ export default function NaviBar() {
       <Navbar.Brand>
         <h1>Interpreter</h1>
       </Navbar.Brand>
-      <Form.Floating>
-        <Form.Control type="text" placeholder="Search..." />
-        <label>Search...</label>
-      </Form.Floating>
     </Navbar>
   );
 }
