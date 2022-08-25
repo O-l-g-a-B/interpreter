@@ -58,40 +58,43 @@ export default function WordTabl() {
   };
 
   return (
-    <Form onSubmit={handleEditFormSubmit}>
-      <Table striped bordered hover variant="dark">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>English</th>
-            <th>Transcription</th>
-            <th>Russian</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {words.map((word, idx) => (
-            <Fragment key={word.id}>
-              {editWordId === word.id ? (
-                <EditableRow
-                  editFormData={editFormData}
-                  handleEditFormChange={handleEditFormChange}
-                  handleCancelClick={handleCancelClick}
-                  word={word}
-                  key={word.id}
-                />
-              ) : (
-                <ReadOnlyRow
-                  word={word}
-                  idx={idx}
-                  key={word.id}
-                  handleEditClick={handleEditClick}
-                />
-              )}
-            </Fragment>
-          ))}
-        </tbody>
-      </Table>
-    </Form>
+    <>
+      <div className="top"></div>
+      <Form className="mt-1" onSubmit={handleEditFormSubmit}>
+        <Table striped bordered hover variant="dark">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>English</th>
+              <th>Transcription</th>
+              <th>Russian</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {words.map((word, idx) => (
+              <Fragment key={word.id}>
+                {editWordId === word.id ? (
+                  <EditableRow
+                    editFormData={editFormData}
+                    handleEditFormChange={handleEditFormChange}
+                    handleCancelClick={handleCancelClick}
+                    word={word}
+                    key={word.id}
+                  />
+                ) : (
+                  <ReadOnlyRow
+                    word={word}
+                    idx={idx}
+                    key={word.id}
+                    handleEditClick={handleEditClick}
+                  />
+                )}
+              </Fragment>
+            ))}
+          </tbody>
+        </Table>
+      </Form>
+    </>
   );
 }
