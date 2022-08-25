@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Carousel, Card, Form } from "react-bootstrap";
+import { Carousel, Card, Form, Container } from "react-bootstrap";
 import wordsArray from "./wordsArray.json";
 import { ButtonWord } from "./ButtonWord";
 
@@ -18,6 +18,7 @@ export default function ControlledCarousel() {
 
   return (
     <>
+      <div className="top"></div>
       <Form.Floating>
         <Form.Control
           type="text"

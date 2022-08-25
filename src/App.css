@@ -1,0 +1,18 @@
+.header__words {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+.header__words-logo {
+  margin-left: 10px;
+}
+.header__words-cards {
+  margin-right: 10px;
+}
+ul {
+  display: flex;
+}
+.top {
+  height: 70px;
+}
