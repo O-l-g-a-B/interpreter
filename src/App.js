@@ -11,22 +11,17 @@ function App() {
   return (<Container>
     <Router>
     <header>
-      
       <Navbar fixed="top" expand="lg" bg="dark" variant="dark">
-      
         <Link to="/">
-              <h1 className="header__words header__words-logo">Dictionary</h1>
+          <h1 className="header__words header__words-logo">Dictionary</h1>
         </Link>
-        
-        <ul>
-          <li>
+          <ul>
+           <li>
              <Link className="header__words header__words-cards" to="/cards">Game
             </Link>
           </li>
         </ul>
-      
       </Navbar>
-      
     </header>
     
     <Routes>

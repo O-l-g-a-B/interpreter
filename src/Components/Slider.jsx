@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Carousel, Card, Form, Container } from "react-bootstrap";
+import { Carousel, Card, Form } from "react-bootstrap";
 import wordsArray from "./wordsArray.json";
 import { ButtonWord } from "./ButtonWord";
 
@@ -46,6 +46,7 @@ export default function ControlledCarousel() {
           </Carousel.Item>
         ))}
       </Carousel>
+      <div>Изучено 0 слов</div>
     </>
   );
 }
