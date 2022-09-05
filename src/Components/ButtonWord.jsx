@@ -6,6 +6,7 @@ export const ButtonWord = ({ word }) => {
   const handleClick = () => {
     setIsPressed(true);
   };
+
   return isPressed ? (
     <div className="mb-5">{word.russian || "бассейн"}</div>
   ) : (
