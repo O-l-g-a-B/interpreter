@@ -16,6 +16,8 @@ export default function ControlledCarousel() {
     return word.english.toLowerCase().includes(value.toLowerCase());
   });
 
+  const [count, setCount] = useState(0);
+
   return (
     <>
       <div className="top"></div>
@@ -39,14 +41,19 @@ export default function ControlledCarousel() {
                   {word.transcription || "[ ˈswɪmɪŋ puːl ]"}
                 </Card.Text>
                 <div>
-                  <ButtonWord word={word} key={word.id} />
+                  <ButtonWord
+                    word={word}
+                    key={word.id}
+                    count={count}
+                    setCount={setCount}
+                  />
                 </div>
               </Card.Body>
             </Card>
           </Carousel.Item>
         ))}
       </Carousel>
-      <div>Изучено 0 слов</div>
+      <h3>Learned {count} words</h3>
     </>
   );
 }
