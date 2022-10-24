@@ -9,6 +9,7 @@ import "./App.css";
 
 function App() {
   return (<Container>
+    
     <Router>
     <header>
       <Navbar fixed="top" expand="lg" bg="dark" variant="dark">
@@ -29,7 +30,8 @@ function App() {
       <Route exact path="/" element={<WordTabl />}/>
       <Route path="*" element={<NoMatch/>}/>   
     </Routes> 
-    </Router></Container>
+    </Router>
+    </Container>
   );
 }
 

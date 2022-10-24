@@ -12,9 +12,9 @@ export default function EditableRow({
       <td>
         <InputGroup className="mb-3">
           <Form.Control
+            required
             name="english"
             type="text"
-            required="required"
             value={editFormData.english}
             onChange={handleEditFormChange}
           />
@@ -23,9 +23,9 @@ export default function EditableRow({
       <td>
         <InputGroup className="mb-3">
           <Form.Control
+            required
             name="transcription"
             type="text"
-            required="required"
             value={editFormData.transcription}
             onChange={handleEditFormChange}
           />
@@ -34,9 +34,9 @@ export default function EditableRow({
       <td>
         <InputGroup className="mb-3">
           <Form.Control
+            required
             name="russian"
             type="text"
-            required="required"
             value={editFormData.russian}
             onChange={handleEditFormChange}
           />
